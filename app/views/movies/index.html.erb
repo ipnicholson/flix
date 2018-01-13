@@ -9,7 +9,7 @@
       </h2>
     </header>
     <p>
-      <%= movie.description %>
+      <%= truncate(movie.description, length:150, separator: ' ') %>
     </p>
     <table>
       <tr>
@@ -25,7 +25,7 @@
           Released:
         </th>
         <td>
-          <%= movie.released_on %>
+          <%= movie.released_on %> (<%= time_ago_in_words(movie.released_on) %> ago)
         </td>
       </tr>
       <tr>
