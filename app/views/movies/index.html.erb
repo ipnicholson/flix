@@ -1,4 +1,4 @@
-<h1><%= @movies.size %> Movies Found:</h1>
+<h1><%= pluralize(@movies.size, 'Movie') %> Found:</h1>
 
 
 <% @movies.each do |movie| %>
@@ -33,7 +33,7 @@
           Total Gross:
         </th>
         <td>
-          <%= number_to_currency(movie.total_gross) %>
+          <%= format_total_gross(movie) %>
         </td>
       </tr>
     </table>
