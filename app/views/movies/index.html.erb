@@ -1,11 +1,10 @@
 <h1><%= pluralize(@movies.size, 'Movie') %> Found:</h1>
 
-
 <% @movies.each do |movie| %>
   <article>
     <header>
       <h2>
-        <%= movie.name %>
+        <%= link_to(movie.name, movie) %>
       </h2>
     </header>
     <p>
